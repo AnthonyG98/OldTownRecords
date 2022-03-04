@@ -1,7 +1,6 @@
-import logo from './images/logo.png';
-import aboutHero from './images/about-hero.png'
 import Admin from './components/Admin';
 import Home from './components/Home';
+import Store from './components/Store';
 import {
        BrowserRouter as Router,
        Routes,
@@ -18,6 +17,8 @@ function App() {
               <Routes>
                      <Route path="/"  element={<Home/>} />
                      <Route path="/Admin" element={<Admin/>}/>
+                     <Route path="/Store" element={<Store/>}/>
+
               </Routes>
        </Router>
        </>

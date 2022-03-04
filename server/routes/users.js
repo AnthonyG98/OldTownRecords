@@ -24,5 +24,35 @@ router.get("/albums", async (req, res)=>{
        const albums = await Vinyl.findAll();
        res.json(albums)
 })
+router.get("/albums/:albumUrl", async (req, res)=>{
+       const albumUrl = req.params.albumUrl
+       const returnedAlbum = await Vinyl.findOne({where:{albumImage: albumUrl}})
+       res.json(returnedAlbum)
+})
+router.put("/albums/:albumUrl", async (req, res) => {
+       const albumUrl = req.params.albumUrl;
+       const album = await Vinyl.findOne({where:{albumImage: albumUrl}});
 
+       const {albumTitle, albumArtist, albumImage, albumQuantity} = req.body; 
+
+       album.albumTitle = albumTitle;
+       album.albumArtist = albumArtist;
+       album.albumImage = albumImage;
+       album.albumQuantity = albumQuantity;
+
+       // pieceId.pieceText = pieceText;
+
+       await album.save();
+
+       // const pieceId = await Pieces.findOne({where:{id: pieceId}})
+       // Pieces.update(
+       //   {pieceTitle: req.body.pieceTitle}
+       // )
+       res.json("updated");
+})
+router.delete("/delete/:albumId", (req, res)=>{
+       const albumId = req.params.albumId;
+       Vinyl.destroy({where: {albumImage: albumId}});
+       res.json("deleted");
+});
 module.exports = router;

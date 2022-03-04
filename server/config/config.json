@@ -4,7 +4,7 @@
     "password": "Vanessa2013!",
     "database": "oldtownrecords",
     "host": "localhost",
-    "port":"3306",
+    "port": "3306",
     "dialect": "mysql"
   },
   "test": {
@@ -15,10 +15,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "b8c30bc333bd2e",
+    "password": "266dd306",
+    "database": "heroku_622a2ec98a83e56",
+    "host": "us-cdbr-east-05.cleardb.net",
     "dialect": "mysql"
   }
 }

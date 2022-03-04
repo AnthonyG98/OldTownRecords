@@ -65,6 +65,7 @@
        flex-direction: column;
        align-items: center;
        justify-content: center;
+       margin-bottom: 5%;
    }
    .about-hero {
        width: 50%;
@@ -179,6 +180,9 @@ input {
        margin-left: auto;
        margin-right: auto;
 }
+.nav-container {
+       display: none;
+}
 .display-container{
        width: 100%;
        display: grid;
@@ -188,6 +192,7 @@ input {
        margin-left: auto;
        margin-right: auto;
        margin-top: 5%;
+       color: #fff;
 }
 .album-img {
        width: 400px;
@@ -203,4 +208,228 @@ input {
 .album-text {
        font-size: 1.5em;
 }
-   
+.edit-container {
+       width: 100%;
+       position: fixed;
+       display: none;
+       top: 15%;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+}
+.edit-overlay {
+       position: absolute;
+       width: 100%;
+       height: 120vh !important;
+       background-color: rgba(17, 17, 17, 0.637);
+       z-index: -99;
+}
+.store-container {
+       width: 100%;
+       height: 50vh;
+       display: flex;
+       justify-content: center;
+       position: relative;
+}
+#store {
+       position: relative;
+       height: 100vh;
+}
+#store-hero {
+       position: absolute;
+       top: 10%;
+       left: 25%;
+}
+#store-logo {
+       position: relative;
+       width: 10%;
+}
+.link {
+       color: #fff !important;
+       text-decoration: none;
+}
+#active {
+       border-bottom: 3px solid orange;
+}
+@media only screen and (max-width: 600px) {
+       .home-container {
+              width: 100%;
+              height: auto;
+          }
+          .img-container {
+              width: 100%;
+              height: 25vh;
+              background-image: url("images/otr-home.png");
+              background-size: contain;
+              position: relative;
+              background-repeat: no-repeat;
+          }
+          #logo {
+                 width: 170px;
+                 position: absolute;
+                 top: 0;
+          }
+          .links-background {
+              width: 100%;
+              background-color: #111;
+              font-family: Helvetica, sans-serif;
+              position: fixed;
+              top: 0;
+              height: 6em;
+              display: none;
+              align-items: center;
+              z-index: 999;
+
+          }
+          .links-container {
+              width: 35%;
+              font-size: 1.75em;
+              display: flex;
+              flex-direction: row;
+              color: white;
+              align-items: center;
+              justify-content: space-evenly;
+              margin-left: auto;
+              font-family: 'jeepersregular';
+              font-size: 2vw;
+          }
+          .about-container {
+              width: 100%;
+              height: auto;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+          }
+          .about-hero {
+              width: 90%;
+              margin-left: auto;
+              margin-right: auto;
+          }
+          .about-head {
+              color: #fff;
+              font-family: 'jeepersregular';
+              font-size: 10vw;
+              letter-spacing: 1vw;
+          }
+          .about-text-container {
+              width: 90%;
+              color: white;
+              font-family: Arial, Helvetica, sans-serif;
+              font-size: 6.75vw;
+              letter-spacing: 0.25vw;
+          }
+          .location-container {
+              color: #fff;
+              font-family: 'jeepersregular';
+              width: 100%;
+              height: 50vh;
+              background-image: url("./images/map.png");
+              background-size: cover;
+              display: flex;
+              flex-direction: row;
+              justify-content: flex-start;
+              align-items: flex-start;
+          }
+          #located-head, #hrs-head {
+              font-size: 10vw;
+              letter-spacing: 1vw;
+              text-shadow: 1px 1px 3px #111;
+              text-align: center;
+          }
+          .hrs-text, .located-text {
+              font-size: 4vw;
+              letter-spacing: 0.25vw;
+              text-shadow: 1px 1px 3px #111;
+              text-align: center;
+          }
+          #iv-head {
+              text-align: center;
+              padding-top: 3vw;
+              padding-bottom: 3vw;
+              text-decoration: underline white;
+          }
+          .footer-container {
+              width: 90%;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              color: white;
+              font-family: Helvetica, sans-serif;
+              margin-left: auto;
+              margin-right: auto;
+          }
+          .mobile-nav-container {
+                 width: 100%;
+                 position: fixed;
+                 top: 0;
+                 left: 0;
+                 z-index: 999;
+          }
+          .bar-container {
+                 width: 75px;
+                 height: 55px;
+                 display: flex;
+                 flex-direction: column;
+                 justify-content: space-evenly;
+                 margin-left: auto;
+                 padding-right: 1em !important;
+          }
+       .bar {
+       width: 100%;
+       height: 2px;
+       background-color: rgb(58, 58, 58);
+       margin-left: auto;
+       }
+       .nav-container {
+              width: 100%;
+              height: 100vh;
+              background-color: #111;
+              display: none;
+              flex-direction: column;
+              justify-content: space-evenly;
+              align-items: center;
+              font-size: 3em;
+       }
+       .display-container{
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              margin-left: auto;
+              margin-right: auto;
+              margin-top: 5%;
+              color: #fff;
+       }
+       .store-container {
+              width: 80%;
+              height: 50vh;
+              display: flex;
+              justify-content: center;
+              position: relative;
+              padding-left: 1em;
+              padding-right: 1em;
+       }
+       #store {
+              position: relative;
+              height: 50vh;
+       }
+       #store-hero {
+              width: 350px;
+              position: absolute;
+              top: 35%;
+              left: 0;       
+       }
+       .album-img {
+              width: 350px;
+              height: 350px;
+       }
+       #store-logo {
+              width: 150px;
+              height: auto;
+              position: absolute;
+              margin-left: auto;
+              margin-right: auto;
+              z-index: 99;
+       }
+}
